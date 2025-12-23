@@ -52,7 +52,7 @@ cv2.arrowedLine(image_rgb, arrow_end, arrow_start, (255, 255, 0), 3, tipLength=0
 
 # Annotate the height value
 height_label_position = (arrow_start[0] - 150, (arrow_start[1] + arrow_end[1]) // 2)
-cv2.putText(image_rgb, f'Height: {height}px', height_label_position, font, 0.8, (255, 255, 0), 2, cv2.LINE_AA)
+cv2.putText(image_rgb, f'Height: {height}px', height_label_position, font, 0.8, (0, 0, 0), 2, cv2.LINE_AA)
 
 # Step 7: Display the Annotated Image
 plt.figure(figsize=(12, 8))
