@@ -16,7 +16,7 @@ height, width, _ = image_rgb.shape
 rect1_width, rect1_height = 150, 150
 top_left1 = (20, 20)  # Fixed 20 pixels padding from top-left
 bottom_right1 = (top_left1[0] + rect1_width, top_left1[1] + rect1_height)
-cv2.rectangle(image_rgb, top_left1, bottom_right1, (0, 255, 255), 3)  # Yellow rectangle
+cv2.rectangle(image_rgb, top_left1, bottom_right1, (0, 0, 255), 3)  # Red rectangle
 
 # Rectangle 2: Bottom-right corner
 rect2_width, rect2_height = 200, 150
@@ -37,9 +37,9 @@ cv2.line(image_rgb, (center1_x, center1_y), (center2_x, center2_y), (0, 255, 0),
 
 # Step 5: Add Text Labels for Regions and Centers
 font = cv2.FONT_HERSHEY_SIMPLEX
-cv2.putText(image_rgb, 'Region 1', (top_left1[0], top_left1[1] - 10), font, 0.7, (0, 255, 255), 2, cv2.LINE_AA)
+cv2.putText(image_rgb, 'Region 1', (top_left1[0], top_left1[1] - 10), font, 0.7, (255, 0, 0), 2, cv2.LINE_AA)
 cv2.putText(image_rgb, 'Region 2', (top_left2[0], top_left2[1] - 10), font, 0.7, (255, 0, 255), 2, cv2.LINE_AA)
-cv2.putText(image_rgb, 'Center 1', (center1_x - 40, center1_y + 40), font, 0.6, (0, 255, 0), 2, cv2.LINE_AA)
+cv2.putText(image_rgb, 'Center 1', (center1_x - 40, center1_y + 40), font, 0.6, (0, 0, 200), 2, cv2.LINE_AA)
 cv2.putText(image_rgb, 'Center 2', (center2_x - 40, center2_y + 40), font, 0.6, (0, 0, 255), 2, cv2.LINE_AA)
 
 # Step 6: Add Bi-Directional Arrow Representing Height
